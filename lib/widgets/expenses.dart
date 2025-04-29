@@ -23,6 +23,12 @@ class _ExpensesState extends State<Expenses> {
         date: DateTime.now(),
         category: Category.leisure),
   ];
+  _openAddExpenseOverlay() {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) => Text("Modal Bottom Sheet"),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +36,10 @@ class _ExpensesState extends State<Expenses> {
       appBar: AppBar(
         title: const Text("Flutter Expense Tracker"),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.add)),
+          IconButton(
+            onPressed: _openAddExpenseOverlay,
+            icon: const Icon(Icons.add),
+          ),
         ],
       ),
       body: Column(
