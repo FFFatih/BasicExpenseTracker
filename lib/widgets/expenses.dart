@@ -25,15 +25,18 @@ class _ExpensesState extends State<Expenses> {
         date: DateTime.now(),
         category: Category.leisure),
   ];
-  _openAddExpenseOverlay() {
-    showModalBottomSheet(
-      useSafeArea: true,
-      isScrollControlled: true,
-      context: context,
-      builder: (ctx) => NewExpense(onAddExpense: _addExpense),
-    );
-  }
-
+_openAddExpenseOverlay() {
+  showModalBottomSheet(
+    useSafeArea: true,
+    isScrollControlled: true,
+    context: context,
+    constraints: const BoxConstraints(
+      maxWidth:double.infinity,
+      minWidth: double.infinity,
+    ),
+    builder: (ctx) => NewExpense(onAddExpense: _addExpense),
+  );
+}
   void _addExpense(Expense expense) {
     setState(() {
       _registeredExpenses.add(expense);
