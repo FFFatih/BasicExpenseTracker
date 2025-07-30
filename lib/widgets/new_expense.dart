@@ -124,6 +124,16 @@ class _NewExpenseState extends State<NewExpense> {
                         ),
                       ),
                       const SizedBox(width: 24),
+                         Expanded(
+                        child: TextField(
+                          controller: _amountController,
+                          keyboardType: TextInputType.number,
+                          decoration: const InputDecoration(
+                            prefixText: "\$ ",
+                            label: Text("Amount"),
+                          ),
+                        ),
+                      ),
                     ],
                   )
                 else
@@ -131,7 +141,7 @@ class _NewExpenseState extends State<NewExpense> {
                     controller: _titleController,
                     maxLength: 50,
                     decoration: const InputDecoration(
-                      label: Text("title"),
+                      label: Text("Title"),
                     ),
                   ),
                 if (width >= 600)
