@@ -1,6 +1,7 @@
 # 📊 Basic Expense Tracker
 
 (Designed for educational purposes)
+<br>
 A simple personal expense tracking application built with Flutter.  
 Allows users to add daily expenses and categorize them.
 
@@ -33,5 +34,6 @@ Clone the project and run:
 ```bash
 flutter pub get
 flutter run
+
 
 
