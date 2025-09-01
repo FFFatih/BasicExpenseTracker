@@ -19,7 +19,10 @@ Allows users to add daily expenses and categorize them.
 </p>
 
 ### Add Expense (Gif)
-![Add Expense](lib/assets/Hamburger.gif)
+<p align="center">
+  <img src="lib/assets/Hamburger.gif" alt="Add Expense" width="250"/>
+</p>
+
 
 ## 🛠️ Built With
 - Flutter
@@ -30,4 +33,5 @@ Clone the project and run:
 ```bash
 flutter pub get
 flutter run
+
 
